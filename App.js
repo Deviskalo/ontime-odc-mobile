@@ -8,50 +8,69 @@ import Activities from "./Screens/Activities";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Text } from "react-native";
 
-
 const Tab = createBottomTabNavigator();
 const Tabs = () => {
   return (
-    <Tab.Navigator screenOptions={{
-      tabBarIconStyle: { display: "none", },
-      tabBarLabelPosition: "beside-icon",
-      tabBarLabelStyle: {
-        fontWeight: "700",
-        fontSize: 15,
-      },
-
-
-    }}>
-      <Tab.Screen name='Home' options={
-        {
-          tabBarLabel: ({ focused, color }) => (<Text style={{
-            color: focused ? "orange" : "gray", fontWeight: "700",
-            fontSize: 15,
-          }}>Home</Text>),
-        }
-      } component={HomeScreen} />
-      <Tab.Screen name='Events' options={
-        {
-          tabBarLabel: ({ focused, color }) => (<Text style={{
-            color: focused ? "orange" : "gray", fontWeight: "700",
-            fontSize: 15,
-          }}>Events</Text>),
-        }
-      }  component={Events} />
-      <Tab.Screen name='Activities' options={
-        {
-          tabBarLabel: ({ focused, color }) => (<Text style={{
-            color: focused ? "orange" : "gray", fontWeight: "700",
-            fontSize: 15,
-          }}>Activities</Text>),
-        }
-      }  component={Activities} />
+    <Tab.Navigator
+      screenOptions={{
+        tabBarIconStyle: { display: "none" },
+        tabBarLabelPosition: "beside-icon",
+        tabBarLabelStyle: {
+          fontWeight: "700",
+          fontSize: 15,
+        },
+      }}>
+      <Tab.Screen
+        name="Home"
+        options={{
+          tabBarLabel: ({ focused, color }) => (
+            <Text
+              style={{
+                color: focused ? "orange" : "gray",
+                fontWeight: "700",
+                fontSize: 15,
+              }}>
+              Home
+            </Text>
+          ),
+        }}
+        component={HomeScreen}
+      />
+      <Tab.Screen
+        name="Events"
+        options={{
+          tabBarLabel: ({ focused, color }) => (
+            <Text
+              style={{
+                color: focused ? "orange" : "gray",
+                fontWeight: "700",
+                fontSize: 15,
+              }}>
+              Events
+            </Text>
+          ),
+        }}
+        component={Events}
+      />
+      <Tab.Screen
+        name="Activities"
+        options={{
+          tabBarLabel: ({ focused, color }) => (
+            <Text
+              style={{
+                color: focused ? "orange" : "gray",
+                fontWeight: "700",
+                fontSize: 15,
+              }}>
+              Activities
+            </Text>
+          ),
+        }}
+        component={Activities}
+      />
     </Tab.Navigator>
   );
 };
-
-
-
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -79,8 +98,13 @@ export default function App() {
           options={{ headerShown: true }}
         />
         <Stack.Screen
-          name='Default'
+          name="Default"
           component={Tabs}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

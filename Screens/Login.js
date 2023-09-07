@@ -44,8 +44,7 @@ const Login = ({ navigation }) => {
                 marginVertical: 12,
                 color: COLORS.black,
                 top: 70,
-              }}
-            >
+              }}>
               Hey, Welcome back!
             </Text>
             <Text style={{ fontSize: 18, top: 60 }}>
@@ -68,8 +67,7 @@ const Login = ({ navigation }) => {
                 alignItems: "center",
                 justifyContent: "center",
                 paddingLeft: 22,
-              }}
-            >
+              }}>
               <TextInput
                 placeholder="Enter your email address"
                 placeholderTextColor={COLORS.gray}
@@ -82,8 +80,7 @@ const Login = ({ navigation }) => {
           <View>
             <View style={{ marginBottom: 12 }}>
               <Text
-                style={{ fontSize: 16, fontWeight: 400, marginVertical: 8 }}
-              >
+                style={{ fontSize: 16, fontWeight: 400, marginVertical: 8 }}>
                 Password
               </Text>
 
@@ -97,8 +94,7 @@ const Login = ({ navigation }) => {
                   alignItems: "center",
                   justifyContent: "center",
                   paddingLeft: 22,
-                }}
-              >
+                }}>
                 <TextInput
                   placeholder="Enter your password"
                   placeholderTextColor={COLORS.gray}
@@ -108,8 +104,7 @@ const Login = ({ navigation }) => {
 
                 <TouchableOpacity
                   style={{ position: "absolute", right: 12 }}
-                  onPress={() => setIsPasswordShown(!isPasswordShown)}
-                >
+                  onPress={() => setIsPasswordShown(!isPasswordShown)}>
                   {isPasswordShown == true ? (
                     <Ionicons name="eye-off" size={24} color={COLORS.black} />
                   ) : (
@@ -137,13 +132,13 @@ const Login = ({ navigation }) => {
                   fontWeight: "bold",
                   marginLeft: wp("27.4%"),
                   bottom: 1,
-                }}
-              >
+                }}>
                 Forgot Password?
               </Text>
             </Pressable>
 
             <Button
+              onPress={() => navigation.navigate("Home")}
               title="Login"
               filled
               style={{
@@ -160,8 +155,7 @@ const Login = ({ navigation }) => {
               flexDirection: "row",
               justifyContent: "center",
               marginVertical: 30,
-            }}
-          >
+            }}>
             <Text style={{ fontSize: 16, color: COLORS.black, top: 30 }}>
               Don't have an account?
             </Text>
@@ -173,8 +167,7 @@ const Login = ({ navigation }) => {
                   fontWeight: "bold",
                   marginLeft: 9,
                   top: 30,
-                }}
-              >
+                }}>
                 Sign Up
               </Text>
             </Pressable>

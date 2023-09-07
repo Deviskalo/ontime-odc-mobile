@@ -12,9 +12,7 @@
       "backgroundColor": "#000",
       "width": "200"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -27,7 +25,7 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    
+
     "runtimeVersion": {
       "policy": "appVersion"
     },
